@@ -19,7 +19,6 @@ def register_database(db):
     """
     class Version(db.Entity):
         version = orm.PrimaryKey(int, auto=False)
-        upgraded = orm.Required(datetime, sql_default='NOW()')
         meta = orm.Optional(orm.Json, lazy=True)
     # end class
 # end def
